@@ -1,0 +1,196 @@
+casting —> means conversion
+
+also known as type coercion
+
+### In build function
+
+1. int()
+2. float()
+3. complex()
+4. bool()
+5. str()
+
+1. int()
+    
+    To convert to int type
+    
+    1. float —> int 
+        
+        int(10.009) —> 10
+        
+    2. complex —> int 
+        
+        int(10+20j) —>  TypeError
+        
+        Complex numbers cannot be converted to int type.
+        
+    3. bool —> int
+        
+        int(True) —> 1
+        
+        int(False) —> 0
+        
+    4. str —> int
+        
+        Sting internally contains only integral value in base-10
+        
+        int(’15’) —> 15
+        
+        int(’0B111’) —> Error
+        
+        int(’10.5’) —> Error
+        
+2. float()
+    
+    To convert to float type
+    
+    1. Int —> float
+        
+        float(15) —> 15.0
+        
+    2. complex to float
+        
+        float(10+20j) —> TypeError
+        
+    3. bool —> float
+        
+        float(True) —> 1.0
+        
+        float(False) —> 0.0
+        
+    4. str —> float
+        
+        should contain internal int or float value
+        
+        float(”10”) —> 10.0
+        
+        float(”20.6) —> 20.6
+        
+        float(”0XFace”) —> ValueError
+        
+3. Complex()
+
+Form -1 complex(x)
+
+To convert to a complex type
+
+1. int —> complex
+    
+    complex(10) —> 10 +0j
+    
+    complex(0B1111) —> 15+0j
+    
+2. Float —> complex
+    
+    complex(10.5) —> 10.5+0j
+    
+3. bool —> float
+    
+    complex(True) —> 1+0j
+    
+    complex(False) —> 0+0j
+    
+4. str —> complex
+    
+    Same rule for the str as well
+    
+    complex(”10.5”) —> 10.5+0j
+    
+    complex(”0B1111) —> valueError
+    
+
+Form -2 complex(x,y)
+
+To convert to a complex type
+
+1. int —> complex
+    
+    complex(10,20) —> 10 +20j
+    
+    complex(0B1111) —> 15+0j
+    
+2. Float —> complex
+    
+    complex(10.5,20.6) —> 10.5+20.6j
+    
+3. bool —> float
+    
+    complex(True,False) —> 1+0j
+    
+4. str —> complex
+    
+    complex(”10.5”,”20”) —> TypeError
+    
+    complex(”0B1111”, “0b9090”) —> ValueError
+    
+1. bool()
+    
+    To convert into a bool type
+    
+    1. int —> bool
+        
+        If argument is 0 — False else always True
+        
+        bool(10) —> True
+        
+        bool(0) —> False
+        
+    2. Float —> bool
+        
+        bool(0.0) —> False
+        
+        bool(0.0001) —> True
+        
+    3. complex —> bol
+        
+        If only both real and imaginary part is 0 then its a False else its a True
+        
+        bool(0 + 0j) —> False
+        
+        bool(1+0j) —> True 
+        
+    4. str —> bool
+        
+        It the string argument is empty then is False else everytime its True
+        
+        bool(”True”) —> True
+        
+        bool(”False) —> True
+        
+        bool(”“) —> False
+        
+2. Str()
+    
+    To convert to str
+    
+    1. int —> Str
+        
+        str(10) —>’10’
+        
+    2. Float —> str
+        
+        str(10.5) —> ‘10.5’
+        
+    3. bool —> str
+        
+        str(True) —> ‘True’
+        
+    4. complex —> bool
+        
+        str(10+20j) —> ‘(10+20j)’
+        
+
+### Fundamental data types vs Immutability
+
+Immutability —> unchangeable 
+
+Once we create an object, we can not perform any changes in that object if we are trying to perform any changes, with those changes, a new object will be created. 
+
+PVM —> checks if the object which we are creating is already there then it will not create new object, rather it will just create a new reference to that same object.
+
+- Improved utilization
+- Improved performance
+
+object reuseability is applicable to int, float, bool, str but not to complex data type. 
+
+List is mutable
