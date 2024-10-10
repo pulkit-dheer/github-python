@@ -1,0 +1,28 @@
+### Slice Operator
+
+```python
+s = “pulkit”
+output  = s[0].upper() + s[1:]
+```
+
+- **+** operator in Python
+    
+    Both String should of String type “ “ + “ “ 
+    
+- * string operator
+    
+    s = ‘magic’ * 3
+    
+    magicmagicmagic
+    
+
+Important conclusions
+
+1. There are 5 types of fundamental data types only
+    - int
+    - float
+    - complex
+    - bool
+    - str
+2. Long data type available only in python-2 but not in python-3
+3. No char data type in Python. using Str we can represent char values.
