@@ -18,3 +18,10 @@ print('Employee Married: ', married)
 
 a,b = [int(x) for x in input("Enter 2 numbers: ").split()]
 print("The sum is: ", a+b)
+
+
+#Q3 Write a program to read 3 float values form the keyboard with , separation and print the sum.
+
+
+a,b,c = [ float(x) for x in input("Enter three float values: ").split(',')]
+print("The sum: ", a+b+c)
