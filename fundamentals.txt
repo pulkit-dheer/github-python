@@ -1,0 +1,81 @@
+Q. What is Python?
+Programming Language
+High Level
+General Purpose
+
+Q. Who is the father of python?
+Guido Van Rossum was working in National Research Institute (Netherland).
+He developed python in 1989 but introduce to market in Q1991.
+
+Q. Why is python become trendy:
+Simple Language & Easy to understand
+Very Less code & Concise code
+AI, ML, DL, NN
+IOT
+
+Q. Why the word python?
+The complete Monty Python’s circus, which was broadcast in BBC in 1969 to 1974.
+from this the python came in from.
+
+Q. Python programming is all rounder?
+C                  ========> Functional Programming language
+C++, Java          ========> OOP
+Perl, Shell Script ========> Scripting Language
+
+Guido borrow:
+Functional programming feature from C.
+Object oriented from C++.
+Scripting language features from Perl, Shell Scripting
+Modular programming features from Modular-3
+
+Most of the python code is borrowed from the C and ABC language.
+
+
+Q. Where we can use python?
+Desktop applications
+Web applications
+Network applications
+Games
+Data Analysis
+ML, DL, NN, AI, IOT...
+
+
+Only 33 reserved are there in python.
+
+Q. Features of python?
+Simple and easy to learn 
+Freeware and Open Source
+High level programming language
+Platform Independent (write once, run anywhere)
+Portability
+Dynamically typed
+Both Procedure oriented & Object oriented
+Interpreted
+extensible
+Embedded
+Extensive Library 
+
+
+Java ---> Oracle
+c# .Net ---> Microsoft
+Python ---> PSF (python software foundation) ---> python.org
+
+Limitations of Python:
+Mobile applications 
+Enterprise applications
+Performance is low(Interpreted language)
+
+Flavours of python:
+Cpython --> C language
+Jython(JVM) --> Java
+Iron Python --> c#, .net
+Ruby Python --> Ruby python
+Anaconda python --> Large data 
+Stackless python --> python for concurrency
+
+
+Python Version
+python 0.9.0 ======> Feb 20th, 1991
+python 1.0   ======> Jan 1994
+python 2.0   ======> Oct 20th, 2000
+python 3.0   ======> Dec 3th, 2008
