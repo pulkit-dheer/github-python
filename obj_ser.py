@@ -7,5 +7,5 @@ emp = {
     'isMarried':True
 }
 
-json_string=json.dumps(emp, indent=4)
+json_string=json.dumps(emp, indent=4, sort_keys= True)
 print(json_string)
