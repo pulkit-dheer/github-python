@@ -32,16 +32,13 @@ for snapshot in response['Snapshots']:
         # ec2.delete_snapshot(SnapshotId=snapshot_id)
         print(f"Deleted EBS snapshot {snapshot_id}")
     else:
-        volume_response = ec2.describe_volumes(VolumeIds=[volume_id])
-        attachments_vol = volume_response['Volumes'][0]['Attachments']
-        attach_vol_id = attachments_vol[0]['VolumeId']
-        if not attachments_vol:
-            # ec2.delete_snapshot(SnapshotId=snapshot_id)
-            print('volume is not attached to anything.')
-
-            print(f"Delted shapshot {snapshot_id}")
-        else: 
-            print(f"I am attached {attachments_vol}")
-            print(attach_vol_id)
-
-        
+        try:
+            volume_response = ec2.describe_volumes(VolumeIds=[volume_id])
+            if not volume_response['Volumes'][0]['Attachments']:
+                ec2.delete_snapshot(SnapshotId=snapshot_id)
+                print(f"Deleted EBS snapshot {snapshot_id}")
+        except ec2.exceptions.ClientError as e:
+            if e.response['Error']['Code'] == 'InvalidVolume.NotFound':
+                
+                ec2.delete_snapshot(SnapshotId=snapshot_id)
+                print(f"Deleted EBS snapshot {snapshot_id}")
